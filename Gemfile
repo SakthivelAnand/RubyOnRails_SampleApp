@@ -27,6 +27,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem "capybara"
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,6 +40,6 @@ end
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
+#  gem "capybara"
 # To use debugger
 # gem 'debugger'
