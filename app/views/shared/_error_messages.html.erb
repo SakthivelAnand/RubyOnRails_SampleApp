@@ -1,0 +1,18 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      <% if @user.errors.full_messages[0].include? "digest" %>
+        The form contains <%= pluralize(@user.errors.count-1, "error") %>
+      <% else %>
+        The form contains <%= pluralize(@user.errors.count, "error") %>
+      <% end %>
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <% if !(msg.include? "digest") %>
+        <li>* <%= msg %></li>
+      <% end %>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
