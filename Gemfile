@@ -29,7 +29,8 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'rspec-rails',      ">= 2.0.0.beta"
+  #gem 'rspec-rails',      ">= 2.0.0.beta"
+  gem 'rspec-rails', '~> 3.7'
   gem "capybara"
   gem 'test-unit'
 end
