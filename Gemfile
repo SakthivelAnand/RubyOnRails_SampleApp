@@ -4,9 +4,13 @@ gem 'rails', '3.2.0'
 gem 'bootstrap-sass', '2.1'
 gem 'sprockets-rails'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.0.1'
+#gem 'will_paginate-bootstrap'
+#gem 'bootstrap-will_paginate', '0.0.6'
+#gem 'bootstrap-will_paginate'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'will_paginate-bootstrap4'
 gem 'sqlite3'
 
 group :development do
@@ -26,6 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "js-routes"
 gem 'jquery-rails'
 
 group :development, :test do
