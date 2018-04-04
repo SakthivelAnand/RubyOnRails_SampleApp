@@ -2,6 +2,7 @@ class MicropostsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
   before_filter :correct_user,   only: :destroy
 
+
   def create
     @micropost = current_user.microposts.build(params[:micropost])
     if @micropost.save
@@ -15,6 +16,8 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
+    #redirect_to root_url
+    flash[:success] = "Post Deleted"
     redirect_to root_url
   end
 
@@ -22,6 +25,8 @@ class MicropostsController < ApplicationController
 
     def correct_user
       @micropost = current_user.microposts.find_by_id(params[:id])
+      #@micropost = current_user.microposts.find_by_id(params[:id]) || @user.microposts.find_by_id(params[:id])
+      #redirect_to root_url if @micropost.nil? && (!(current_user.admin?) || !current_user?(@user))
       redirect_to root_url if @micropost.nil?
     end
 end

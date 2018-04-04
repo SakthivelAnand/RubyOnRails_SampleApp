@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.22.5'
 gem 'bootstrap-sass', '2.1'
 gem 'sprockets-rails'
+gem "rack"
+#gem "activesupport"
+#gem 'haml-rails'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
+gem 'paperclip', '~> 3.0'
 #gem 'rails-ujs', '~> 5.1.0.beta1'
 #gem 'will_paginate-bootstrap'
 #gem 'bootstrap-will_paginate', '0.0.6'
@@ -32,8 +36,8 @@ group :assets do
 end
 
 gem "js-routes"
-gem 'jquery-rails'
-
+#gem 'jquery-rails'
+gem 'jquery-rails', '2.0.2'
 group :development, :test do
   #gem 'rspec-rails',      ">= 2.0.0.beta"
   gem 'rspec-rails', '~> 3.7'
